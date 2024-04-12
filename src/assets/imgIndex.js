@@ -1,4 +1,4 @@
-import Logo from './images/logo.png';
+import Logo from './images/Logo.png';
 import Header from './images/header-img.png';
 import Img1 from './images/pic1.png';
 import Img2 from './images/pic2.png';
