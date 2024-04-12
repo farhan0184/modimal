@@ -76,11 +76,15 @@
   }
 
 .width{
-  @apply w-[90%]  mx-auto
+  @apply xl:w-[90%] w-[95%]  mx-auto
 }
 .center{
   @apply flex justify-center items-center
 }
 .navIcon{
-  @apply lg:text-2xl text-xl cursor-pointer hover:text-primary hover:bg-primary/40  rounded
+  @apply xl:text-2xl text-xl cursor-pointer hover:text-primary hover:bg-primary/40  rounded
+}
+
+.hide{
+  @apply lg:block hidden
 }
