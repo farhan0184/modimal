@@ -17,7 +17,7 @@ export default function Header() {
                 <div className="flex h-full items-center width ">
                     <div className="text-white w-full sm:w-[60%] lg:w-[35%] flex flex-col ">
                         <h2 className="mb-10 lg:text-4xl text-2xl italic text-left">
-                            Elegance In Simplicity Earth's Harmony
+                            Elegance In Simplicity Earth is Harmony
                         </h2>
                         <CustomBtn title={"Shop Now"} style={"bg-white text-primary hover:text-white w-max"}/>
                     </div>
