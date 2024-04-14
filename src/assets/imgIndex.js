@@ -1,6 +1,6 @@
 import Logo from './images/Logo.png';
 import Footerbox from './images/Footerbox.png';
-import Header from './images/header-img.png';
+import HeaderBack from './images/header-img.png';
 import Img1 from './images/pic1.png';
 import Img2 from './images/pic2.png';
 import Img3 from './images/pic3.png';
@@ -22,4 +22,4 @@ import Img18 from './images/pic18.png';
 import Img19 from './images/pic19.png';
 import Img20 from './images/pic20.png';
 
-export {Logo,Header,Img1,Img2,Img3,Img4,Img5,Img6,Img7,Img8,Img9,Img10,Img11,Img12,Img13,Img14,Img15,Img16,Img17,Img18,Img19,Img20, Footerbox}
+export {Logo,HeaderBack,Img1,Img2,Img3,Img4,Img5,Img6,Img7,Img8,Img9,Img10,Img11,Img12,Img13,Img14,Img15,Img16,Img17,Img18,Img19,Img20, Footerbox}

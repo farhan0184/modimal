@@ -78,7 +78,7 @@ export default function Footer() {
     }
   ]
   return (
-    <footer className='bg-secondary -z-10 py-16 relative'>
+    <footer className='bg-secondary  py-16 relative'>
       <div className='width lg:flex lg:flex-row flex-col gap-5'>
         <div className='lg:w-1/2 w-full lg:mb-0 mb-10'>
           <div className='lg:w-[80%] w-full'>

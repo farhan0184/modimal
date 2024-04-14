@@ -37,7 +37,7 @@ export default function Navbar() {
     <div className='relative'>
       <div className='width flex justify-between items-center  h-14'>
         {/* hamburger menu and search */}
-        <div className='lg:hidden flex items-center gap-5 '>
+        <div className='lg:hidden flex items-center gap-2 '>
           <Sheet>
             <SheetTrigger asChild>
               <Button
@@ -52,14 +52,14 @@ export default function Navbar() {
               <div className='relative'>
                 <nav className="flex flex-col gap-2 text-lg mt-10">
                   {links.map((link) => (
-                    <div key={link.id} className={`cursor-pointer text-lg border-b-[1px] `} onMouseEnter={() => handleMouseEnter(link.id)} onMouseLeave={handleMouseLeave}>
-                      <Link href={'#'} className={` gap-1 flex items-center justify-between h-10 ${link.isSublink && ''}`}>
+                    <div key={link.id} className={`cursor-pointer text-base border-b-[1px] `} onMouseEnter={() => handleMouseEnter(link.id)} onMouseLeave={handleMouseLeave}>
+                      <Link href={'#'} className={` gap-1 flex items-center justify-between h-8 ${link.isSublink && ''}`}>
                         {link.name}
                         {link?.isSublink && <ChevronDown
                           className={`relative top-[1px] ml-1 h-3 w-3 transition duration-200 ${link.id === id && rotate}`}
                           aria-hidden="true" />}
                       </Link>
-                      {link?.isSublink && isHover && link?.id === id && <div className='ml-5 mt-2 mb-5'>
+                      {link?.isSublink && isHover && link?.id === id && <div className='ml-5 mt-2 mb-5 transition duration-200'>
                         <NavListItem data={data?.subLinks?.category} />
                       </div>}
                     </div>

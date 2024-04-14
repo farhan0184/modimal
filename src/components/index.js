@@ -11,7 +11,8 @@ import Modiweek from './home/Modiweek'
 import Sustainability from './home/Sustainability'
 import NavListItem from './navbar/NavListItem'
 import NavItemHover from './navbar/NavItemHover' 
+import ProductCard from './shared/ProductCard' 
 
 
 
-export { ColorCircle, CustomBtn, Footer, Navbar, TopTitle, BestSellers, Collection, FollowUs, Header, Modiweek, Sustainability, NavListItem, NavItemHover }
+export { ColorCircle, CustomBtn, Footer, Navbar, TopTitle, BestSellers, Collection, FollowUs, Header, Modiweek, Sustainability, NavListItem, NavItemHover, ProductCard}
