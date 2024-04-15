@@ -7,7 +7,7 @@ import { CustomBtn } from '..'
 export default function Header() {
     return (
         <div
-            className="relative h-[95vh] text-center"
+            className="relative xl:h-[95vh] 2xl:h-[70vh] text-center"
             >
             <Image src={HeaderBack} alt="HeaderBack" className="absolute overflow-hidden  bg-cover bg-no-repeat  h-full w-full object-cover z-10" />
             <div

@@ -12,7 +12,11 @@ import Sustainability from './home/Sustainability'
 import NavListItem from './navbar/NavListItem'
 import NavItemHover from './navbar/NavItemHover' 
 import ProductCard from './shared/ProductCard' 
+import SearchInput from './search/SearchInput' 
+import SearchLeft from './search/SearchLeft' 
+import SearchRight from './search/SearchRight' 
+import FiltterOptions from './shared/FiltterOptions' 
 
 
 
-export { ColorCircle, CustomBtn, Footer, Navbar, TopTitle, BestSellers, Collection, FollowUs, Header, Modiweek, Sustainability, NavListItem, NavItemHover, ProductCard}
+export { ColorCircle, CustomBtn, Footer, Navbar, TopTitle, BestSellers, Collection, FollowUs, Header, Modiweek, Sustainability, NavListItem, NavItemHover, ProductCard, SearchInput, SearchLeft, SearchRight, FiltterOptions}

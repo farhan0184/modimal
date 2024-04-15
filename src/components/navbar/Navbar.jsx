@@ -7,16 +7,19 @@ import { CgSearch } from "react-icons/cg";
 import { FaRegHeart } from "react-icons/fa6";
 import { Logo } from '@/assets/imgIndex';
 import React, { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, X } from "lucide-react"
 import { CustomBtn, NavItemHover, NavListItem } from '..';
 import { links } from '@/lib/data';
 import { isLogin } from '@/store/userStore';
 import Link from 'next/link'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { Button } from '../ui/button';
+import { usePathname } from 'next/navigation';
 
 
 export default function Navbar() {
+  const pathName = usePathname()
+  console.log(pathName);
   const [isHover, setIsHover] = React.useState(false)
   const [id, setId] = useState(-1)
 
@@ -72,7 +75,7 @@ export default function Navbar() {
               </div>
             </SheetContent>
           </Sheet>
-          <CgSearch className='navIcon' />
+          {pathName === '/search'? <X className='navIcon '/> : <CgSearch className='navIcon ' />}
         </div>
         {/* logo */}
         <div className=''>
@@ -94,7 +97,7 @@ export default function Navbar() {
         </div>
         {/* icons */}
         <div className='flex items-center xl:gap-5 gap-2'>
-          <CgSearch className='navIcon hide' />
+          {pathName === '/search'? <X className='navIcon hide'/> : <CgSearch className='navIcon hide' />}
           <FiShoppingBag className='navIcon' />
           <FaRegHeart className='navIcon' />
           <>
