@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { FaRegUser } from "react-icons/fa";
+import { FaHeart, FaRegUser } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgSearch } from "react-icons/cg";
@@ -75,7 +75,7 @@ export default function Navbar() {
               </div>
             </SheetContent>
           </Sheet>
-          {pathName === '/search'? <X className='navIcon '/> : <CgSearch className='navIcon ' />}
+          {pathName === '/search'? <X className='navIcon cursor-pointer' onClick={() => window.location.href = '/'}/> : <CgSearch className='navIcon cursor-pointer' onClick={() => window.location.href = '/search'}/>}
         </div>
         {/* logo */}
         <div className=''>
@@ -97,9 +97,9 @@ export default function Navbar() {
         </div>
         {/* icons */}
         <div className='flex items-center xl:gap-5 gap-2'>
-          {pathName === '/search'? <X className='navIcon hide'/> : <CgSearch className='navIcon hide' />}
+          {pathName === '/search'? <X className='navIcon hide cursor-pointer' onClick={() => window.location.href = '/'}/> : <CgSearch className='navIcon hide cursor-pointer' onClick={() => window.location.href = '/search'}/>}
           <FiShoppingBag className='navIcon' />
-          <FaRegHeart className='navIcon' />
+          {pathName === '/wish-list' ? <FaHeart className='navIcon text-red-600' /> : <FaRegHeart className={`navIcon `} />}
           <>
             {isLogin ? <>
               <FaRegUser className='navIcon ' />

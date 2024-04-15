@@ -1,8 +1,11 @@
+'use client'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
 
 export default function ProductCard({ data, isHover, setIsHover, id, handleMouseEnter, style }) {
+    const pathName = usePathname()
     return (
         <div className={`relative `}>
             <Image src={data.img} alt={data.title} className={`  ${style}`} />
@@ -25,7 +28,7 @@ export default function ProductCard({ data, isHover, setIsHover, id, handleMouse
 
                     </div> </>}
                 <div className='absolute top-5 right-5'>
-                    {isHover && id === data.id ?
+                    {pathName === '/wish-list' ? <FaHeart className='text-base text-red-600 ' /> : isHover && id === data.id ?
                         <FaHeart onMouseLeave={() => setIsHover(false)} className='text-base text-red-600 ' /> : <FaRegHeart onMouseEnter={() => handleMouseEnter(data.id)} className='text-base ' />}
                 </div>
             </div>
