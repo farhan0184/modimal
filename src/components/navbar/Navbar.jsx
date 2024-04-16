@@ -10,14 +10,16 @@ import React, { useState } from "react"
 import { ChevronDown, X } from "lucide-react"
 import { CustomBtn, NavItemHover, NavListItem } from '..';
 
-import { isLogin } from '@/store/userStore';
+// import { isLogin } from '@/store/userStore';
 import Link from 'next/link'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { Button } from '../ui/button';
 import { usePathname } from 'next/navigation';
+import { userStore } from '@/store/userStore';
 
 
 export default function Navbar({isHover, setIsHover,links}) {
+  const {isLogin, setIsLogin, logout} = userStore()
   const pathName = usePathname()
   // console.log(pathName);
 

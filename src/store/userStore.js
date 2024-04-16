@@ -5,9 +5,9 @@ export const isLogin = false
 
 
 export const  userStore = create(persist((set)=>({
-    isLogin: window.localStorage.getItem('isLogin')|| false,
-    setIsLogin: (state) => {
-        set((state)=>({isLogin: state.isLogin}))
+    isLogin: false,
+    setIsLogin: () => {
+        set((state)=>({isLogin: !state.isLogin}))
     },
     logout: () => set({isLogin: false}),
 }),{

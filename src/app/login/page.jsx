@@ -66,7 +66,7 @@ export default function RegisterPage() {
             <CustomInput type={'email'} form={form} name="email" placeholder={"Email"} style="w-full outline-none border-[1px] border-primary px-5 h-12" />
             <CustomInput type={'password'} form={form} name="password" placeholder={"Password"} style="w-full outline-none border-[1px] border-primary px-5 h-12" />
              <Link href={'/login'} className="text-primary mt-5">Forget Password</Link>
-            <CustomBtn title={'Login'} link="/" style={'w-full h-12 rounded-none text-base text-primary'} />
+            <CustomBtn title={'Login'} link="/" style={'w-full h-12 rounded-none text-base text-white'} />
           </div>
         </form>
         <p className="text-base font-bold text-center my-5">Or</p>
