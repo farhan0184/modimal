@@ -1,5 +1,5 @@
 'use client'
-import { Plus } from 'lucide-react'
+import { Minus, Plus } from 'lucide-react'
 import React from 'react'
 
 
@@ -22,9 +22,9 @@ export default function FiltterOptions({ filtter, setFiltterList, filterList }) 
         <div className={`${isOpen && ' border-[1px] border-primary '}} cursor-pointer`}>
             <div onClick={() => setIsOpen(!isOpen)} className={`flex  items-center justify-between ${isOpen ? 'bg-transparent text-black' : 'bg-primary text-white'}   p-3 `}>
                 <h1>{filtter.name}</h1>
-                <Plus />
+                {isOpen?<Minus/>:<Plus />}
             </div>
-            {isOpen && <div className='p-3 space-y-3'>
+            {isOpen && <div className='p-3 space-y-3 '>
                 {filtter.list.map((item, idx) =>
                     <div key={idx} className='flex gap-2 items-center  text-primary text-lg'>
                         <input type="checkbox" name={item.name} checked={filterList.includes(item.title)} onChange={(e) => handleChange(e, item)} className="bg-primary w-5 h-5" />

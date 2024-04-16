@@ -9,7 +9,7 @@ import { Logo } from '@/assets/imgIndex';
 import React, { useState } from "react"
 import { ChevronDown, X } from "lucide-react"
 import { CustomBtn, NavItemHover, NavListItem } from '..';
-import { links } from '@/lib/data';
+
 import { isLogin } from '@/store/userStore';
 import Link from 'next/link'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
@@ -17,10 +17,10 @@ import { Button } from '../ui/button';
 import { usePathname } from 'next/navigation';
 
 
-export default function Navbar() {
+export default function Navbar({isHover, setIsHover,links}) {
   const pathName = usePathname()
-  console.log(pathName);
-  const [isHover, setIsHover] = React.useState(false)
+  // console.log(pathName);
+
   const [id, setId] = useState(-1)
 
   const handleMouseEnter = (id) => {
@@ -82,7 +82,7 @@ export default function Navbar() {
           <Image src={Logo} alt='Logo' className='w-[170px] ' />
         </div>
         {/* links */}
-        <div className='lg:flex hidden xl:gap-10 gap-5'>
+        <div className='lg:flex hidden xl:gap-7 gap-5'>
           {links.map((link) => (
             <div key={link.id} className='cursor-pointer xl:text-lg text-[16px]' onMouseEnter={() => handleMouseEnter(link.id)} onMouseLeave={() => handleMouseLeave(link.id)}>
               <div className='lg:flex hidden gap-1 items-center h-14 '>
@@ -99,14 +99,14 @@ export default function Navbar() {
         <div className='flex items-center xl:gap-5 gap-2'>
           {pathName === '/search'? <X className='navIcon hide cursor-pointer' onClick={() => window.location.href = '/'}/> : <CgSearch className='navIcon hide cursor-pointer' onClick={() => window.location.href = '/search'}/>}
           <FiShoppingBag className='navIcon' />
-          {pathName === '/wish-list' ? <FaHeart className='navIcon text-red-600' /> : <FaRegHeart className={`navIcon `} />}
+          {pathName === '/wish-list' ? <FaHeart className='navIcon text-red-600' /> : <FaRegHeart onClick={() => window.location.href='/wish-list'} className={`navIcon `} />}
           <>
             {isLogin ? <>
               <FaRegUser className='navIcon ' />
             </>
               : <>
-                <Link href={'#'} className='border-[1px] rounded-md border-primary hide xl:h-10 h-8 center xl:px-3 px-2'>SignIn</Link>
-                <CustomBtn title={'SignUp'} link={'#'} style={'xl:h-10 h-8 center xl:px-3 px-2 hide'} />
+                <Link href={'/login'} className='border-[1px] rounded-md border-primary hide h-10 pt-2 center xl:px-3 px-2'>SignIn</Link>
+                <CustomBtn title={'SignUp'} link={'/register'} style={'h-10 center xl:px-3 px-2 hide'} />
               </>
             }
           </>

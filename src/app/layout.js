@@ -1,7 +1,6 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import TopTitle from "@/components/shared/TopTitle";
-import { Footer, Navbar } from "@/components";
+import BaseLayout from "@/layout/BaseLayout";
 
 const montserrat = Montserrat({
   weight: ["400", "700", "900"],
@@ -18,10 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <TopTitle/>
-        <Navbar/>
-        {children}
-        <Footer/>
+        <BaseLayout child={children}/>
       </body>
     </html>
   );

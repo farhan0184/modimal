@@ -27,5 +27,9 @@ import Img23 from './images/pic23.png';
 import Img24 from './images/pic24.png';
 import Img25 from './images/pic25.png';
 import Img26 from './images/pic26.png';
+import Auth from './images/auth.png';
+import Apple from './images/mac.png';
+import Google from './images/google.png';
+import Facebook from './images/facebook.png';
 
-export {Logo,HeaderBack,Img1,Img2,Img3,Img4,Img5,Img6,Img7,Img8,Img9,Img10,Img11,Img12,Img13,Img14,Img15,Img16,Img17,Img18,Img19,Img20,Img21,Img22,Img23,Img24,Img25,Img26, Footerbox}
+export {Auth,Logo,HeaderBack,Img1,Img2,Img3,Img4,Img5,Img6,Img7,Img8,Img9,Img10,Img11,Img12,Img13,Img14,Img15,Img16,Img17,Img18,Img19,Img20,Img21,Img22,Img23,Img24,Img25,Img26, Footerbox, Apple, Google, Facebook}

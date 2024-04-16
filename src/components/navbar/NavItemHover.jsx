@@ -3,7 +3,7 @@ import { NavListItem } from '..'
 import Image from 'next/image'
 export default function NavItemHover({setIsHover,data}) {
     return (
-        <div className={`bg-black/30 lg:block hidden backdrop-blur-sm absolute top-14 w-full h-[calc(100vh-88px)] z-50`}>
+        <div className={`bg-black/30 lg:block hidden backdrop-blur-sm absolute top-14 w-full h-[calc(100vh-88px)] z-50 `}>
             <div className='2xl:h-[65vh] h-[75vh] bg-white' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
                 <div className='width flex'>
                     <div className='lg:flex lg:gap-10 gap-3 lg:w-1/2 w-full lg:pt-5'>
